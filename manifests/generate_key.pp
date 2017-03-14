@@ -9,8 +9,9 @@ define gnutls::generate_key(
     
     exec{"generate certfile ${certfile} and keyfile ${keyfile} via openssl":
         command     => "/usr/bin/openssl req -x509 -nodes -newkey rsa:4096 -keyout ${keyfile} -out ${certfile} -subj '${subj}'",
-#        unless      => "/usr/bin/test -f ${certfile} && /usr/bin/test -f ${keyfile}",
+        unless      => "/usr/bin/test -f ${certfile} && /usr/bin/test -f ${keyfile}",
         user        => $user,
         logoutput   => true,
+        timeout     => 2000,
     }
 }
