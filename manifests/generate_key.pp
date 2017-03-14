@@ -2,7 +2,7 @@ define gnutls::generate_key(
     $certfile,
     $keyfile,
     $user,
-    $subj = hiera('gnutls_subj', '/C=US/ST=OK/L=City/O=Example ORG/OU=IT Department/CN=example.com'),
+    $subj = hiera('gnutls_subj', '/C=CA/ST=Ontario/L=City/O=Example ORG/OU=IT Department/CN=example.com'),
 ) {
 
     include gnutls::package
