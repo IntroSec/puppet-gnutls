@@ -1,6 +1,6 @@
 {
   "name": "hyper3xpl0iter-gnutls",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Andre Mattie",
   "summary": "Module for creating TLS certs and keys with GnuTLS",
   "license": "Apache-2.0",
